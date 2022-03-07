@@ -9,6 +9,11 @@ body{
     background-image: url("https://assets.pokemon.com//assets/cms2-es-es/img/misc/virtual-backgrounds/masters/forest.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
 }
 
 .App{
@@ -16,7 +21,7 @@ body{
 }
 
 .color-square{
-    height: 300px;
+    height: 800px;
 }
 
 .pokemon-card{
@@ -24,7 +29,7 @@ body{
     padding: 10px;
     border-radius: 8px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-    max-width: 300px;
+    max-width: 350px;
     background-color:rgba(255, 255, 255, 0.52);
 }
 
@@ -42,5 +47,26 @@ body{
 }
 
 .pokemon-card button{
-    margin: 0 10px;
+    margin: 5px 10px;
+    padding: 5px;
+    border: none;
+    padding: 4px 6px;
+    background-color: rgb(59, 170, 96);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0px 0px 5px rgb(4, 241, 83);
+    transition: all 300ms;
+    cursor: pointer;
 }
+
+.pokemon-card button:hover{
+    box-shadow: 0px 0px 5px rgb(4, 241, 83), 2px 2px 6px rgb(59, 170, 96);
+}
+
+.pokemon-card button:active{
+    box-shadow: 0px 0px 10px rgb(10, 71, 30) inset;
+}
+
+
+
+

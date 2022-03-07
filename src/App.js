@@ -12,7 +12,6 @@ function App() {
   const [isHc, setIsHc] = useState(true)
   const [counter, setCounter] = useState(1);
   
-
     useEffect(() => {
       axios.get (`https://pokeapi.co/api/v2/pokemon/${counter}/`)
         .then(res => {
@@ -41,7 +40,25 @@ function App() {
         setIsHc(true);
       }  
     }
-    
+
+    const handleBack = () => {
+      console.log(counter)
+      if(counter>1){
+        setCounter(counter - 1)
+      }else{
+        setCounter(898)
+      }
+    }
+
+    const handleNext = () => {
+      console.log(counter)
+      if(898>counter){
+        setCounter(counter + 1)
+      }else{
+        setCounter(1)
+      }
+    }
+
     return (
       <div className="App">
         <div className="pokemon-card">
@@ -55,8 +72,8 @@ function App() {
           <button onClick={convertWeight}>Convert to Kilograms</button>
           <button onClick={convertHeight}>Convert to Meters</button>
 
-          <button onClick={()=> setCounter (counter - 1)}>Back</button>
-          <button onClick={()=> setCounter (counter + 1)}>Next</button>
+          <button onClick={handleBack}>Back</button>
+          <button onClick={handleNext}>Next</button>
         </div>
     </div>
   );
